@@ -56,27 +56,13 @@ P = True
 
 while (P == True):
     dec = input("Desea pelear(P) o finalizar(F) la partida?")
-    if dec == P:
+    if dec == "P":
         pk2 = Pokemon("Reshiram")
         NPC = Entrenador("N",pk2)
         r = str(NPC)
         print("Desafias al entrenador N.")
         print(r)
+    elif dec == "F":
+        P = False
 
-    p2 = Perro(str(input("Ingrese el nombre de un perro: ")),str(input("Ingrese la edad del perro: ")))
-    list_perros.append(p2)
-    i = int(input("Ingrese 0 para salir, 1 para mostrar una lista de perros y un numero mayor para quedarse: "))
-    if(i <= 0):
-        print("///////////////////////////////////////////////////////////////////")
-        print("Fin")
-        break
-    elif (i == 1) :
-        print("///////////////////////////////////////////////////////////////////")
-        for j in list_perros:
-            print(f"Perro: {j.nombre}; Edad: {j.edad}")
 
-    print("///////////////////////////////////////////////////////////////////")
-
-# Acceder a los atributos e invocar un método
-print(persona1.nombre)
-persona1.saludar()
